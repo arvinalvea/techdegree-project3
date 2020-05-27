@@ -19,11 +19,41 @@ h1 {
     letter-spacing: 1px;
 }
 
-p {
+p,
+label {
     color: grey;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  border: none;
+  font-size: 16px;
+  height: 50px;
+  margin: 15px 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+}
 
+input[placeholder],
+select[placeholder] {
+    font-size: .7em;
+    color: grey;
+}
+
+input[placeholder] {
+    text-align: right;
+}
+
+
+fieldset {
+    width: 100%;
+    border: none;
+  }
 
 /* ================================= 
   Base Layout Styles
@@ -59,6 +89,15 @@ p {
     text-align: center;
 }
 
+.contact-info {
+    width: 90%;
+    margin: .3em auto;
+    border-top: 2.5px solid black;
+    border-bottom: 2.5px solid black;
+    padding-bottom: 1em;
+}
+
+
 /* ---- Page Elements ---- */
 
 
@@ -76,8 +115,14 @@ p {
 ==================================== */
 
 .main-header,
-.banner {
+.banner,
+.contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+#zipcode {
+    width:50%;
+    margin-right: auto;
+}    
