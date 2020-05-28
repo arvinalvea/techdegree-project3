@@ -39,13 +39,8 @@ textarea {
   background-color: #e8eeef;
   color: #8a97a0;
   border-radius: 5px;
+  transition: background-color 1s;
 }
-
-/* input[placeholder],
-select[placeholder] {
-    font-size: .7em;
-    color: grey;
-} */
 
 ::placeholder {
     text-align: right;
@@ -73,7 +68,20 @@ button {
     border-radius: 5px;
 }
 
+input:focus {
+    border: 2px solid navy;
+    background-color: yellowgreen;
+}
 
+select:focus {
+    border: 2px solid navy;
+    background-color: yellowgreen;
+}
+
+textarea:focus {
+    border: 2px solid navy;
+    background-color: yellowgreen;
+}
 
 /* ================================= 
   Base Layout Styles
@@ -105,6 +113,7 @@ button {
     padding-bottom: 2.5em;
     border-bottom: 5px solid black;
     text-align: center;
+    width: 100%;
 }
 
 .contact-info {
@@ -113,11 +122,13 @@ button {
     border-top: 2.5px solid black;
     border-bottom: 2.5px solid black;
     padding-bottom: 1em;
+    background: rgba(0, 0, 0, .2);
 }
 
 .wrapper {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 input[type="checkbox"],
@@ -138,14 +149,55 @@ footer p {
 }
 
 
-
-
-
 /* ================================= 
   Media Queries
 ==================================== */
 
+@media (min-width: 768px) {
 
+    h1 {
+        font-size: .9em;
+    }
+
+    h2 {
+        margin-top: 50px;
+    }
+
+    .main-header {
+        height: 50px;
+    }
+
+    .banner,
+    .contact-info,
+    .newsletter {
+        width:70%;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+       flex-basis: 70%;
+   }
+
+   #zipcode { 
+       max-width: 25%;
+   }
+
+
+   .container label {
+       align-self: center;
+       flex-basis: 25%;
+
+   }
+
+}
 
 
 
@@ -159,10 +211,16 @@ footer p {
 .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 #zipcode {
-    width:50%;
-    margin-right: auto;
+    width:40%;
+    
 }    
+
+h2 {
+    align-self: center;
+}
+
+
