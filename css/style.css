@@ -41,14 +41,18 @@ textarea {
   border-radius: 5px;
 }
 
-input[placeholder],
+/* input[placeholder],
 select[placeholder] {
     font-size: .7em;
     color: grey;
-}
+} */
 
 ::placeholder {
     text-align: right;
+    font-style: italic;
+    color: grey;
+    font-size: .7em;
+    padding-right: 5px;
 }
 
 textarea {
